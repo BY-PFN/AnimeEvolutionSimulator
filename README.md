@@ -176,6 +176,67 @@ game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
     end
 end)
 
+_G.Ragnarok = false
+tgls1:Toggle("Ragnarok",false, function(bool)
+    _G.Ragnarok = bool
+end)
+spawn(function()
+    while wait(0.1) do
+      if _G.Ragnarok then
+        pcall(function() 
+            
+
+
+local args = {
+  [1] = {
+      [1] = "BuyTier",
+      [2] = workspace.__WORKSPACE.FightersPoint.Ragnarok,
+      [3] = "E",
+      [4] = {}
+  }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
+
+         
+            
+        end)
+      end
+    end
+end)
+
+_G.Ragnarok1 = false
+tgls1:Toggle("Ragnarok5ดาว",false, function(bool)
+    _G.Ragnarok1 = bool
+end)
+spawn(function()
+    while wait(0.1) do
+      if _G.Ragnarok1 then
+        pcall(function() 
+            
+
+local args = {
+  [1] = {
+      [1] = "BuyTier",
+      [2] = workspace.__WORKSPACE.FightersPoint.Ragnarok,
+      [3] = "E",
+      [4] = {
+          ["Poseidon"] = true,
+          ["Sasaki"] = true,
+          ["Hercules"] = true
+      }
+  }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
+
+
+         
+            
+        end)
+      end
+    end
+end)
 -------------------------------------------------------------------------------------------------------------------
 
 
@@ -228,5 +289,39 @@ tgls2:Button("ฮันเตอร์ × ฮันเตอร์ ", function()
     
 end)
 
+tgls2:Button("มายฮีโร่ ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(20.738351821899414, 3.5420360565185547, 2393.4365234375)    
+      
+  
+end)
+
+tgls2:Button("โลก2 ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.755592346191406, 2.6749017238616943, 2645.599609375)    
+      
+  
+end)
+
+tgls2:Button("มหาเวทย์ผนึกมาร ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(401.6087341308594, 2.921861171722412, 2608.64208984375)    
+      
+  
+end)
+
+tgls2:Button("สลาม ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(432.03887939453125, 2.800079584121704, 2314.130859375)    
+      
+  
+end)
+
+tgls2:Button("คนชมเทพ ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(423.1486511230469, 2.857194662094116, 1990.1640625)    
+      
+  
+end)
 
 end
