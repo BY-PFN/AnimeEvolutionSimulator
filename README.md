@@ -23,9 +23,10 @@ local tgls3 = serv:Channel("TP Event Power")
 ---------------------------------------------------------------------------
 
 _G.Click = true
-_G.PowerTrain = false
+_G.PowerTrain = true
+_G.MAGNET = true
 _G.RankUp = false
-
+_G.Mob999 = false
 ----------------------------------------------------------------------------
 
 
@@ -33,12 +34,17 @@ tgls:Toggle("Click",true, function(bool)
     _G.Click = bool
 end)
 
-tgls:Toggle("PowerTrain",false, function(bool)
+tgls:Toggle("PowerTrain",true, function(bool)
     _G.PowerTrain = bool
 end)
-
+tgls:Toggle("MAGNET",true, function(bool)
+  _G.MAGNET = bool
+end)
 tgls:Toggle("RankUp",false, function(bool)
     _G.RankUp = bool
+end)
+tgls:Toggle("RankUp",false, function(bool)
+  _G.Mob999 = bool
 end)
 
 ----------------------------------------------------------------------------
@@ -84,6 +90,30 @@ game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
       end
     end
 end)
+-------
+spawn(function()
+  while wait(0.1) do
+    if _G.MAGNET then
+      pcall(function() 
+          
+
+
+        local Coin = game.Players.localPlayer.Character.HumanoidRootPart
+        for i,v in pairs(game.Workspace.__DROPS:GetChildren()) do
+            v.CFrame = Coin.CFrame
+            wait(0.2)
+            end
+            
+        
+        
+          
+          
+      end)
+    end
+  end
+end)
+
+------
 
 spawn(function()
     while wait(0.1) do
@@ -111,6 +141,39 @@ game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
       end
     end
 end)
+
+
+
+spawn(function()
+  while wait(0.1) do
+    if _G.Mob999 then
+      pcall(function() 
+          
+        local args = {
+          [1] = {
+              [1] = "AttackMob",
+              [2] = workspace.__WORKSPACE.Mobs:FindFirstChild("Mob Pchaicho"):FindFirstChild("Mob 999"),
+              [3] = "Left Arm"
+          }
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
+        
+
+
+          wait()
+          
+          
+      end)
+    end
+  end
+end)
+
+
+
+
+
+
 -------------------------------------------------------------------------------------------------------------------
 
 _G.EggHXH = false
