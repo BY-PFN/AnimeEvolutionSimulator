@@ -19,7 +19,7 @@ local serv = win:Server("ByPFN", "")
 local tgls = serv:Channel("AutoFarm")
 local tgls1 = serv:Channel("Egg")
 local tgls2 = serv:Channel("TP")
-
+local tgls3 = serv:Channel("TP Event Power")
 ---------------------------------------------------------------------------
 
 _G.Click = true
@@ -240,42 +240,42 @@ end)
 -------------------------------------------------------------------------------------------------------------------
 
 
-tgls2:Button("วันพีช ", function()
+tgls2:Button("Ooy Piece  วันพีช ", function()
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.19173415005207062, 3.051313638687134, -62.48855209350586)    
         
     
 end)
 
-tgls2:Button("นารูโตะ ", function()
+tgls2:Button("Narutye นารูโตะ ", function()
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8.242718696594238, 3.0192301273345947, 219.44590759277344)    
         
     
 end)
 
-tgls2:Button("ดราก้อนบอล ", function()
+tgls2:Button("Draygon Bool ดราก้อนบอล ", function()
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.520077705383301, 3.0192301273345947, 478.4737854003906)    
         
     
 end)
 
-tgls2:Button("ไททั้น ", function()
+tgls2:Button("Attack On ไททั้น ", function()
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.2818922996520996, 3.0192301273345947, 772.1893920898438)    
         
     
 end)
 
-tgls2:Button("ดาบพิฆาตอสูร ", function()
+tgls2:Button("Slayer Demons ดาบพิฆาตอสูร ", function()
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.634533166885376, 3.0192301273345947, 1069.7413330078125)    
         
     
 end)
 
-tgls2:Button("วันพันช์แมน ", function()
+tgls2:Button("One Punchy วันพันช์แมน ", function()
     
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8.284528732299805, 3.019230365753174, 1366.1849365234375)    
         
@@ -323,5 +323,86 @@ tgls2:Button("คนชมเทพ ", function()
       
   
 end)
+
+tgls2:Button("Tokyio Revengers ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(484.01043701171875, 2.802030086517334, 1704.9384765625)    
+      
+  
+end)
+
+tgls2:Button("Clover Church ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1090.91943359375, 2.559436321258545, 1562.9537353515625)    
+      
+  
+end)
+
+tgls2:Button("Back Clover ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(641.842041015625, 2.8020291328430176, 1537.6514892578125)    
+      
+  
+end)
+
+tgls2:Button("Defense2 ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1440.3270263671875, 15.58559513092041, 1094.453857421875)    
+      
+  
+end)
+
+tgls2:Button("Training Area ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(41921.2825927734375, 2.513629198074341, 1437.83349609375)    
+      
+  
+end)
+
+tgls2:Button("Sword Art ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1921.2825927734375, 2.513629198074341, 1437.83349609375)    
+      
+  
+end)
+
+tgls2:Button("Blechi ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2266.163818359375, 2.754854440689087, 2299.5234375)    
+      
+  
+end)
+
+tgls2:Button("Joujo Adventures ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2266.163818359375, 2.754854440689087, 2299.5234375)    
+      
+  
+end)
+
+tgls2:Button("Mob Pchaicho ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1377.579345703125, 4.441339492797852, 2822.348388671875)    
+      
+  
+end)
+
+tgls2:Button("TGOH ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1106.9857177734375, 5.44486141204834, 2980.19189453125)    
+      
+  
+end)
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+tgls3:Button("X16 POWER AREA ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1641.04345703125, 4.441815376281738, 2577.443115234375)    
+      
+  
+end)
+
 
 end
