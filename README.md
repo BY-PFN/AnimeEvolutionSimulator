@@ -25,8 +25,10 @@ local tgls3 = serv:Channel("TP Event Power")
 _G.Click = true
 _G.PowerTrain = true
 _G.MAGNET = true
-_G.RankUp = false
-_G.Mob999 = false
+_G.RankUp = true
+_G.Weapon = true
+_G.Sung = true
+_G.X25POWER = true
 ----------------------------------------------------------------------------
 
 
@@ -40,11 +42,17 @@ end)
 tgls:Toggle("MAGNET",true, function(bool)
   _G.MAGNET = bool
 end)
-tgls:Toggle("RankUp",false, function(bool)
+tgls:Toggle("RankUp",true, function(bool)
     _G.RankUp = bool
 end)
-tgls:Toggle("RankUp",false, function(bool)
-  _G.Mob999 = bool
+tgls:Toggle("Weapon",true, function(bool)
+    _G.Weapon = bool
+end)
+tgls:Toggle("Sung",true, function(bool)
+  _G.Sung = bool
+end)
+tgls:Toggle("X25POWER",true, function(bool)
+  _G.X25POWER = bool
 end)
 
 ----------------------------------------------------------------------------
@@ -67,7 +75,7 @@ end)
 
 
 spawn(function()
-    while wait(0.1) do
+    while wait() do
       if _G.PowerTrain then
         pcall(function() 
             
@@ -101,7 +109,7 @@ spawn(function()
         local Coin = game.Players.localPlayer.Character.HumanoidRootPart
         for i,v in pairs(game.Workspace.__DROPS:GetChildren()) do
             v.CFrame = Coin.CFrame
-            wait(0.2)
+            wait()
             end
             
         
@@ -116,7 +124,7 @@ end)
 ------
 
 spawn(function()
-    while wait(0.1) do
+    while wait(14.1) do
       if _G.RankUp then
         pcall(function() 
             
@@ -143,21 +151,53 @@ game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
 end)
 
 
+spawn(function()
+    while wait(10.1) do
+      if _G.Weapon then
+        pcall(function() 
+            
+
+
+local args = {
+    [1] = {
+        [1] = "Weapon"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
+
+
+
+ 
+            wait()
+            
+            
+        end)
+      end
+    end
+end)
+
+
 
 spawn(function()
-  while wait(0.1) do
-    if _G.Mob999 then
+  while wait() do
+    if _G.Sung then
       pcall(function() 
           
-        local args = {
-          [1] = {
-              [1] = "AttackMob",
-              [2] = workspace.__WORKSPACE.Mobs:FindFirstChild("Mob Pchaicho"):FindFirstChild("Mob 999"),
-              [3] = "Left Arm"
-          }
-        }
-        
-        game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
+     
+
+
+local args = {
+    [1] = {
+        [1] = "AttackMob",
+        [2] = workspace.__WORKSPACE.Mobs:FindFirstChild("Level Solo").Sung,
+        [3] = "Right Arm"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Client:FireServer(unpack(args))
+
+      
         
 
 
@@ -467,5 +507,31 @@ tgls3:Button("X16 POWER AREA ", function()
   
 end)
 
+spawn(function()
+    while wait(10) do
+      if _G.X25POWER then
+        pcall(function() 
+            
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(414.8289794921875, 4.123180389404297, 4732.04541015625)
+if (CFrame.new(414.8289794921875, 4.123180389404297, 4732.04541015625).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position) >= 5 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(414.8289794921875, 4.123180389404297, 4732.04541015625)
+end
+
+ 
+            wait(10)
+            
+            
+        end)
+      end
+    end
+end)
+
+tgls3:Button("X25 POWER AREA ", function()
+    
+  game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(414.8289794921875, 4.123180389404297, 4732.04541015625)    
+      
+  
+end)
 
 end
